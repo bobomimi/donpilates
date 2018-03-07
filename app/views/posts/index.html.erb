@@ -31,9 +31,9 @@
         <div class="card-body">
           <div class="row">
             <div class="col-lg-6">
-              <%= link_to post do %>
-                <%=image_tag post.image.url(:post_index), class: "img-fluid rounded" %>
-              <% end %>
+              <% link_to post do %>
+              <%= image_tag post.image, class: "card-img-top"%>
+               <% end %>
             </div>
             <div class="col-lg-6">
               <h2 class="card-title"><%= post.title %></h2>

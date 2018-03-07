@@ -27,15 +27,3 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
-<%= link_to I18n.with_locale(:en){post_path(@product, locale: 'en')} do %>
-  <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
-<% end %>
-<%= link_to I18n.with_locale(:es){post_path(@product, locale: 'es')} do %>
-  <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/products/images/000/000/001/original/spain.png?1520005015', width: '23', height: '15.33', alt: 'English') %>
-<% end %>
-<%= link_to I18n.with_locale(:he){post_path(@roduct, locale: 'he')} do %>
-  <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
-<% end %>
-<%= link_to I18n.with_locale(:de){post_path(@product, locale: 'de')} do %>
-  <%= image_tag('https://cdn3.iconfinder.com/data/icons/world-flags-square-vol-2/48/Germany-128.png', width: '23', height: '15.33', alt: 'English') %>
-<% end %>
