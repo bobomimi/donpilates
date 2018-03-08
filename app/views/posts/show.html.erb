@@ -1,37 +1,127 @@
-<p id="notice"><%= notice %></p>
+<!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container"><div>
+        <%= link_to I18n.with_locale(:en){post_path(@post, locale: 'en')} do %>
+          <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
+        <% end %>
+        <%= link_to I18n.with_locale(:es){post_path(@post, locale: 'es')} do %>
+          <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/products/images/000/000/001/original/spain.png?1520005015', width: '23', height: '15.33', alt: 'English') %>
+        <% end %>
+        <%= link_to I18n.with_locale(:he){post_path(@post, locale: 'he')} do %>
+          <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
+        <% end %>
+        <%= link_to I18n.with_locale(:de){post_path(@post, locale: 'de')} do %>
+          <%= image_tag('https://cdn3.iconfinder.com/data/icons/world-flags-square-vol-2/48/Germany-128.png', width: '23', height: '15.33', alt: 'English') %>
+        <% end %></div>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <%= link_to t('navbar.blog'), posts_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('navbar.products'), products_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('navbar.about'), welcome_about_path, class: "nav-link" %>
+            <li>
+            <li class="nav-item">
+              <%= link_to t('navbar.contact'), new_contact_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <% if admin_signed_in? %>
+                <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link" %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+        <!-- Page Content -->
+    <div class="container">
 
-<p>
-  <strong>Sub title:</strong>
-  <%= @post.sub_title %>
-</p>
+      <!-- Page Heading/Breadcrumbs -->
+      <h1><%= @post.title %></h1>
+     
 
-<p>
-  <strong>Image:</strong>
-  <%= @post.image %>
-</p>
+      
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
+      <div class="row">
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
 
-<%= link_to I18n.with_locale(:en){post_path(@post, locale: 'en')} do %>
-  <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
-<% end %>
-<%= link_to I18n.with_locale(:es){post_path(@post, locale: 'es')} do %>
-  <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/products/images/000/000/001/original/spain.png?1520005015', width: '23', height: '15.33', alt: 'English') %>
-<% end %>
-<%= link_to I18n.with_locale(:he){post_path(@post, locale: 'he')} do %>
-  <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
-<% end %>
-<%= link_to I18n.with_locale(:de){post_path(@post, locale: 'de')} do %>
-  <%= image_tag('https://cdn3.iconfinder.com/data/icons/world-flags-square-vol-2/48/Germany-128.png', width: '23', height: '15.33', alt: 'English') %>
-<% end %>
+          <!-- Preview Image 900x300-->
+
+         <%= image_tag @post.image.url, class: "img-fluid rounded" %>
+
+
+          <hr>
+
+          <!-- Date/Time -->
+          <h2><%= @post.sub_title %></h2>
+
+          <hr>
+
+          <!-- Post Content -->
+          <p class="lead"><%= raw @post.description %></p>
+
+          
+         <p>Posted on <%= @post.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
+          
+        
+          <center>
+          <a class="twitter-share-button" href="https://twitter.com/donpilates/">Tweet</a>
+          <a class="twitter-follow-button"
+          href="https://twitter.com/TwitterDev">
+          Follow @Donpilates</a>
+
+          <!--<script src="https://apis.google.com/js/platform.js" async defer></script>
+          <g:plusone></g:plusone>
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
+          <g:plus action="share"></g:plus>-->
+          
+          </center>
+          <!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Side Widget</h5>
+            <div class="card-body">
+              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+              agghg
+              <% if admin_signed_in? %>
+                <%= link_to 'Edit', edit_post_path(@post) %>
+              <% end %>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    
+
+     
+
+
+      
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+
+
+
