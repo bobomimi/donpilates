@@ -1,5 +1,4 @@
 es:
-  hello: "Hello worldes"
   activerecord:
     errors:
       messages:

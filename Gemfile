@@ -69,3 +69,5 @@ gem 'font_assets'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
+
+gem 'unidecode'
