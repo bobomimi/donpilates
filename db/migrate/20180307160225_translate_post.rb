@@ -5,7 +5,7 @@ class TranslatePost < ActiveRecord::Migration[5.1]
       sub_title: :string,
       image: :string,
       description: :text,
-      slug: :string
+      slug: :string,
     }, {
       migrate_data: true,
       remove_source_columns: true

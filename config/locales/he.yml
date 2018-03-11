@@ -1,4 +1,41 @@
 he:
+  products:
+    reformers:
+      title: מיטות רפורמר
+      sub_title:
+      description:
+    reformer_tower:
+      title: רפורמר-טאוור משולב
+      sub_title:
+      description:
+    reformer_cadilac:
+      title: קאדילק בשילוב רפורמר
+      sub_title:
+      description:
+    cadilac:
+      title: קאדילק
+      sub_title:
+      description:
+    barrels_arcs:
+      title: מכשירים מקושתים לדר-בארל
+      sub_title:
+      description:
+    sprinsboards:
+      title: ספרינג בורד
+      sub_title:
+      description:
+    wall_unit:
+      title: יחידת קיר
+      sub_title:
+      description:
+    chairs:
+      title: כסאות פילאטיס
+      sub_title:
+      description:
+    equipment_accessories:
+      title: ציוד ואביזרים
+      sub_title:
+      description:
   activerecord:
     errors:
       messages:

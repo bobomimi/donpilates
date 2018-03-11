@@ -30,6 +30,43 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  products:
+    reformers:
+      title: Reformers
+      sub_title:
+      description:
+    reformer_tower:
+      title: Reformers with Tower
+      sub_title:
+      description:
+    reformer_cadilac:
+      title: Reformers with Cadilac
+      sub_title:
+      description:
+    cadilac:
+      title: Cadilac
+      sub_title:
+      description:
+    barrels_arcs:
+      title: Barrels & Arcs
+      sub_title:
+      description:
+    sprinsboards:
+      title: Springboard
+      sub_title:
+      description:
+    wall_unit:
+      title: Wall Tower
+      sub_title:
+      description:
+    chairs:
+      title: Chairs
+      sub_title:
+      description:
+    equipment_accessories:
+      title: Equipment & Accessories
+      sub_title:
+      description:
   activerecord:
     errors:
       messages:

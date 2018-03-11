@@ -71,3 +71,5 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 
 gem "paperclip"
+gem 'babosa'
+gem 'unicode'

@@ -1,4 +1,41 @@
 es:
+  products:
+    reformers:
+      title: Reformers
+      sub_title:
+      description:
+    reformer_tower:
+      title: Reformers con torre
+      sub_title:
+      description:
+    reformer_cadilac:
+      title: Reformers con cadilac
+      sub_title:
+      description:
+    cadilac:
+      title: Cadilac
+      sub_title:
+      description:
+    barrels_arcs:
+      title: Barriles escalera
+      sub_title:
+      description:
+    sprinsboards:
+      title: Springboard
+      sub_title:
+      description:
+    wall_unit:
+      title: Torres
+      sub_title:
+      description:
+    chairs:
+      title: Sillas
+      sub_title:
+      description:
+    equipment_accessories:
+      title: Otros accesorios
+      sub_title:
+      description:
   activerecord:
     errors:
       messages:

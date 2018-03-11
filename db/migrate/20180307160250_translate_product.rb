@@ -6,7 +6,7 @@ class TranslateProduct < ActiveRecord::Migration[5.1]
       image: :string,
       price: :decimal,
       description: :text,
-      slug: :string
+      slug: :string,
     }, {
       migrate_data: true,
       remove_source_columns: true

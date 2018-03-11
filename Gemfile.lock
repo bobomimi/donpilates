@@ -51,6 +51,7 @@ GEM
     aws-sdk-resources (2.11.0)
       aws-sdk-core (= 2.11.0)
     aws-sigv4 (1.0.2)
+    babosa (1.0.2)
     bcrypt (3.1.11)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
@@ -236,6 +237,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.6)
       execjs (>= 0.3.0, < 3)
+    unicode (0.4.4.4)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.5.1)
@@ -254,6 +256,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
+  babosa
   bootstrap-sass
   byebug
   capybara (~> 2.13)
@@ -284,6 +287,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+  unicode
   web-console (>= 3.3.0)
 
 BUNDLED WITH
