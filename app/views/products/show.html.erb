@@ -1,3 +1,4 @@
+
 <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container"><div>
@@ -61,7 +62,7 @@
 
             <%= image_tag @product.image.url, class: "card-img-top img-fluid" %>
             <div class="card-body">
-              <h3 class="card-title"><%= @product.title %></h3>
+              <h3 class="card-title"><%= @product.main_title %></h3>
               <h4>$<%= @product.price %></h4>
               <p class="card-text"><%= @product.description %></p>
   

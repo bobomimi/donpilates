@@ -1,4 +1,4 @@
-      <%= link_to url_for(locale: :en) do %>
+<%= link_to url_for(locale: :en) do %>
         <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
       <% end %>
       <%= link_to url_for(locale: :es) do %>
@@ -36,7 +36,7 @@
                <% end %>
             </div>
             <div class="col-lg-6">
-              <h2 class="card-title"><%= post.title %></h2>
+              <h2 class="card-title"><%= post.main_title %></h2>
               <p class="card-text"><%= post.sub_title %></p>
               <%= link_to 'Read More', post, class: 'btn btn-primary' %>
               <% if admin_signed_in? %>

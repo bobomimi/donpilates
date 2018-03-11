@@ -2,12 +2,14 @@
 
 one:
   title: MyString
+  main_title: MyString
   sub_title: MyString
   image: MyString
   description: MyText
 
 two:
   title: MyString
+  main_title: MyString
   sub_title: MyString
   image: MyString
   description: MyText
