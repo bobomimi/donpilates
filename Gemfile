@@ -76,3 +76,5 @@ gem 'unicode'
 gem "figaro"
 gem 'sitemap_generator'
 gem "fog-aws"
+
+gem 'config'
