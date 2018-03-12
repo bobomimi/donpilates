@@ -15,11 +15,6 @@ class Product < ApplicationRecord
   # Validate the attached image is image/jpg, image/png, etc
   
   has_attached_file :image,
-      :styles => {
-        :thumb=> "100x100#",
-        :small  => "300x300>",
-        :large => "900x900>"
-          },
       :default_url => "/images/:style/missing.png",
       :storage => :s3,
       :s3_credentials => {
