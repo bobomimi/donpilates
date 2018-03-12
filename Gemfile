@@ -74,3 +74,4 @@ gem 'babosa'
 gem 'unicode'
 
 gem "figaro"
+gem 'sitemap_generator'
