@@ -10,13 +10,23 @@ class Product < ApplicationRecord
       attribute_changed?('title')
     end
      
-  has_attached_file :image, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
-  }, default_url: "/images/:style/missing.png"
+ 
 
   # Validate the attached image is image/jpg, image/png, etc
+  
+  has_attached_file :image,
+      :styles => {
+        :thumb=> "100x100#",
+        :small  => "300x300>",
+        :large => "900x900>"
+          },
+      :default_url => "/images/:style/missing.png",
+      :storage => :s3,
+      :s3_credentials => {
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] },
+      :url => ':s3_alias_url',
+      :s3_host_alias => 'd1egmt44b887qe.cloudfront.net', 
+      :bucket => 'danielpilates'
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
-
 end
