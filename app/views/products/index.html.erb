@@ -27,6 +27,7 @@
 
       <div class="row">
         <% @products.each do |product| %>
+        <% cache product do %>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <%= image_tag product.image ,class: "card-img-top"%>
@@ -47,7 +48,7 @@
           </div>
         </div>
         <% end %>
-        
+        <% end %>
       </div>
 
 
