@@ -7,9 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload', cache: 'cached/all' %>
     <style>body{padding-top: 54px;}@media (min-width: 992px) {body {padding-top: 56px;}}.carousel-item {height: 65vh;min-height: 300px;background: no-repeat center center scroll;-webkit-background-size: cover;-moz-background-size:cover;-o-background-size: cover;background-size: cover;}.portfolio-item {margin-bottom: 30px;}</style>
   </head>
 
@@ -76,5 +74,5 @@
 
     <%= yield %>
   </body>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', cache: 'cached/all' %>
 </html>
