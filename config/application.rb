@@ -12,6 +12,7 @@ module Donpilates
     config.load_defaults 5.1
     config.i18n.default_locale = :en
     I18n.available_locales = [:en, :es, :he, :de]
+    config.middleware.use Rack::Deflater
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
