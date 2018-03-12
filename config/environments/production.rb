@@ -108,4 +108,6 @@ Rails.application.configure do
       s3_region: ENV['AWS_REGION']
     }
   }
+
+  config.action_controller.asset_host = 'd2i2a97qlc0u51.cloudfront.net'
 end
