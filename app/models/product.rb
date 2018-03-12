@@ -11,9 +11,21 @@ class Product < ApplicationRecord
     end
      
 
-    has_attached_file :image, default_url: "/images/:style/missing.png", url: ':s3_alias_url',
-    s3_host_alias: 'd1egmt44b887qe.cloudfront.net',
-    path: '/:class/:attachment/:id_partition/:style/:filename'
+    #has_attached_file :image, default_url: "/images/:style/missing.png"
+    has_attached_file :image,
+      :styles => {
+        :thumb=> "100x100#",
+        :small  => "300x300>",
+        :large => "900x900>"
+          },
+      :storage => :s3,
+      :s3_credentials => {
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] },
+      :url => ':s3_alias_url',
+      :s3_host_alias => 'd1egmt44b887qe.cloudfront.net', 
+      :bucket => 'danielpilates',
+      :path => "images/:class/:id.:style.:extension"
 
 
     validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
