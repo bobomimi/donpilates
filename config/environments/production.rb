@@ -110,4 +110,9 @@ Rails.application.configure do
   }
 
   config.action_controller.asset_host = 'd2i2a97qlc0u51.cloudfront.net'
+
+  config.public_file_server.headers = {
+    'Cache-Control' => 'public, s-maxage=31536000, max-age=15552000',
+    'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
+  }
 end
