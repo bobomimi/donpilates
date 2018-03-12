@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/sitemap.xml.gz', to: redirect("https://s3-eu-west-1.amazonaws.com/danielpilates/sitemap.xml.gz")
+  #get '/sitemap.xml.gz', to: redirect("https://s3-eu-west-1.amazonaws.com/danielpilates/sitemap.xml.gz")
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     root 'welcome#index'
     get 'welcome/about'

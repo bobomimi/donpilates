@@ -1,16 +1,16 @@
 SitemapGenerator::Sitemap.default_host = "https://danielpilates.herokuapp.com" # Your Domain Name
-SitemapGenerator::Sitemap.public_path = 'tmp/sitemap'
+#SitemapGenerator::Sitemap.public_path = 'tmp/sitemap'
 # Where you want your sitemap.xml.gz file to be uploaded.
-SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new( 
-aws_access_key_id: ENV["AWS_ACCESS_KEY"],
-aws_secret_access_key: ENV["AWS_SECRET_KEY"],
-fog_provider: 'AWS',
-fog_directory: ENV["S3_BUCKET_NAME"],
-fog_region: ENV["AWS_REGION"]
-)
+#SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new( 
+#aws_access_key_id: ENV["AWS_ACCESS_KEY"],
+#aws_secret_access_key: ENV["AWS_SECRET_KEY"],
+#fog_provider: 'AWS',
+#fog_directory: ENV["S3_BUCKET_NAME"],
+#fog_region: ENV["AWS_REGION"]
+#)
 
 # The full path to your bucket
-SitemapGenerator::Sitemap.sitemaps_host = "https://danielpilates.s3.amazonaws.com"
+#SitemapGenerator::Sitemap.sitemaps_host = "https://danielpilates.s3.amazonaws.com"
 # The paths that need to be included into the sitemap.
 SitemapGenerator::Sitemap.create do
     
