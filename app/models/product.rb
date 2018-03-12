@@ -11,7 +11,9 @@ class Product < ApplicationRecord
     end
      
 
-    has_attached_file :image, default_url: "/images/:style/missing.png"
+    has_attached_file :image, default_url: "/images/:style/missing.png", url: ':s3_alias_url',
+    s3_host_alias: 'd1egmt44b887qe.cloudfront.net',
+    path: '/:class/:attachment/:id_partition/:style/:filename'
 
 
     validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
