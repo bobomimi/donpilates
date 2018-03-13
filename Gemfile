@@ -77,4 +77,4 @@ gem "figaro"
 gem 'sitemap_generator'
 gem "fog-aws"
 
-#gem 'config'
+gem 'rack-cors', :require => 'rack/cors'

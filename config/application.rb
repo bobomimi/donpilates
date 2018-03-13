@@ -13,6 +13,12 @@ module Donpilates
     config.i18n.default_locale = :en
     I18n.available_locales = [:en, :es, :he, :de]
     config.middleware.use Rack::Deflater
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
