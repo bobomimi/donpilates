@@ -12,7 +12,6 @@ class Product < ApplicationRecord
      
  
 
-  # Validate the attached image is image/jpg, image/png, etc
   
   has_attached_file :image,
       :default_url => "/images/:style/missing.png",
