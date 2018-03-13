@@ -109,16 +109,16 @@ Rails.application.configure do
     }
   }
 
-  config.action_controller.asset_host = 'd2brp4pi5y6186.cloudfront.net'
+  #config.action_controller.asset_host = 'dnolght8j312u.cloudfront.net'
 
   config.action_controller.perform_caching = true
   
   config.cache_store = :memory_store, { size: 64.megabytes }
 
-  config.public_file_server.headers = {
-    "Cache-Control" => "public, s-maxage=31536000, maxage=15552000",
-    "Expires" => "#{1.year.from_now.to_formatted_s(:rfc822)}"
- }
+  #config.public_file_server.headers = {
+  #  "Cache-Control" => "public, s-maxage=31536000, maxage=15552000",
+  #  "Expires" => "#{1.year.from_now.to_formatted_s(:rfc822)}"
+ #}
 
  #config.action_controller.session[:domain] = 'imagecdn.donpilates.com'
 
