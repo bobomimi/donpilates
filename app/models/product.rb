@@ -21,6 +21,10 @@ class Product < ApplicationRecord
         :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] },
       :url => ':s3_alias_url',
       :s3_host_alias => 'imagecdn.donpilates.com', 
-      :bucket => 'danielpilates'
+      :bucket => 'danielpilates',
+      :s3_headers => {
+    "Cache-Control" => "public, s-maxage=31536000, maxage=15552000",
+    "Expires" => "#{1.year.from_now.to_formatted_s(:rfc822)}"
+ }
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 end
