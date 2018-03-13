@@ -109,7 +109,7 @@ Rails.application.configure do
     }
   }
 
-  config.action_controller.asset_host = 'cdn.donpilates.com'
+  config.action_controller.asset_host = 'donpilates.com'
 
   config.action_controller.perform_caching = true
   
