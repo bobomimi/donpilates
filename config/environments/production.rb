@@ -109,7 +109,7 @@ Rails.application.configure do
     }
   }
 
-  config.action_controller.asset_host = 'https://donpilates.com'
+  config.action_controller.asset_host = 'd2i2a97qlc0u51.cloudfront.net'
 
   config.action_controller.perform_caching = true
   
