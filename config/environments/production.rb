@@ -120,6 +120,8 @@ Rails.application.configure do
     "Expires" => "#{1.year.from_now.to_formatted_s(:rfc822)}"
  }
 
+ config.action_controller.session[:domain] = 'imagecdn.donpilates.com'
+
 
 
 end
