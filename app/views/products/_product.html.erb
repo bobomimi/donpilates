@@ -1,0 +1,68 @@
+ <!-- <%= link_to url_for(locale: :en) do %>
+        <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
+      <% end %>
+      <%= link_to url_for(locale: :es) do %>
+        <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/products/images/000/000/001/original/spain.png?1520005015', width: '23', height: '15.33', alt: 'Spanish') %>
+      <% end %>
+      <%= link_to url_for(locale: :he) do %>
+        <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
+      <% end %>
+      <%= link_to url_for(locale: :de) do %>
+        <%= image_tag('https://cdn3.iconfinder.com/data/icons/world-flags-square-vol-2/48/Germany-128.png', width: '23', height: '15.33', alt: 'Spanish') %>-->
+      <% end %>
+<!-- Page Content -->
+    <div class="container">
+
+            <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">
+        <small></small>
+      </h1>
+
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href=""></a>
+        </li>
+        <li class="breadcrumb-item active"><strong>Store</strong></li>
+      </ol>
+
+      <div class="row">
+        <% @products.each do |product| %>
+        <% cache product do %>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <%= image_tag product.image ,class: "card-img-top"%>
+            <div class="card-body">
+              <h4 class="card-title">
+               <%= link_to product do %>
+                <%= product.main_title %> 
+                <% end %>
+              </h4>
+              <p class="card-text"><%= product.sub_title %></p>
+              <p class="card-text"></p>
+              <% if admin_signed_in? %>
+                <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
+                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+                <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+
+
+     
+  
+
+
+
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
