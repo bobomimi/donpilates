@@ -1,6 +1,4 @@
 
-  <body>
-    <% cache do %>
 
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -12,21 +10,21 @@
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
          <!-- <%= link_to products_path do %>-->
-          <div class="carousel-item active" style="background-image: url('https://s3-eu-west-1.amazonaws.com/pilatesshopa/donpilates/pexels-photo-866370.jpeg')">
+          <div class="carousel-item active" style="background-image: url('https://d1egmt44b887qe.cloudfront.net/products-me/slider1.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3><%= t 'welcome.first_slide_title' %></h3>
               <p><%= t 'welcome.first_slide_description' %></p>
             </div>
             </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://s3-eu-west-1.amazonaws.com/pilatesshopa/donpilates/pexels-photo-866370.jpeg')">
+          <div class="carousel-item" style="background-image: url('https://d1egmt44b887qe.cloudfront.net/products-me/slider3.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>Second Slide</h3>
               <p>This is a description for the second slide.</p>
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/rsz_1optimized-vahe%281%29.jpg?1519965400')">
+          <div class="carousel-item" style="background-image: url('https://d1egmt44b887qe.cloudfront.net/products-me/slider2.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>Third Slide</h3>
               <p>This is a description for the third slide.</p>
@@ -44,109 +42,58 @@
         </a>
       </div>
     </header>
-    
-
+<<!-- Page Content -->
+    <!-- Page Content -->
+    <!-- Page Content -->
     <div class="container">
 
       <h1 class="my-4"></h1>
 
       <!-- Marketing Icons Section -->
-    <div class="row">
-     <!-- <% @posts.each do |post| %>
+      <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header"><%= post.title %></h4>
+            <h4 class="card-header">Card Title</h4>
             <div class="card-body">
-              <p class="card-text"><%= post.sub_title %></p>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">
-              <%= link_to 'Read More', post, class: "btn btn-primary" %>
-              <% if admin_signed_in? %>
-              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
-              <%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
-              <% end %>
+              <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
-        <% end %>
-      </div>-->
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Card Title</h4>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Card Title</h4>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- /.row -->
-
-
-      <!-- Page Heading/Breadcrumbs -->
-      
-
-   <!--  <div class="row">
-        <% @products.each do |product| %>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-          <%= link_to product do %>
-          <% end %>
-            <div class="card-body">
-              <h4 class="card-title">
-               <%= link_to product do %>
-                <%= product.title %>
-                <% end %>
-              </h4>
-              <p class="card-text"><%= product.sub_title %></p>
-              <p class="card-text"></p>
-              <% if admin_signed_in? %>
-                <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
-                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
-                <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
-            <% end %>
-            </div>
-          </div>
-        </div>
-        <% end %>-->
-        
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/pilatesshopa/donpilates/3-1024x427-min.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#"><%= t 'products.reformers.title' %></a>
-              </h4>
-              <p class="card-text"><%= t 'products.reformer.sub_title' %></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/pilatesshopa/donpilates/3-1024x427-min.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#"><%= t 'products.reformer_tower.title' %></a>
-              </h4>
-              <p class="card-text"><%= t 'welcome.reformer_tower.sub.title' %></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://s3-eu-west-1.amazonaws.com/pilatesshopa/donpilates/3-1024x427-min.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#"><%= t 'products.barrels_arcs.title' %></a>
-              </h4>
-              <p class="card-text"><%= t 'welcome.reformer_tower' %></p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-
-    
-
+    <!-- /.container -->
 
 
 
       <!-- Features Section -->
       <div class="row">
         <div class="col-lg-6">
-          <h2>Modern Business Features</h2>
+          <h2>Daniel Pilates Classic Reformer</h2>
           <p>The Modern Business template by Start Bootstrap includes:</p>
           <ul>
             <li>
@@ -160,7 +107,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
         </div>
         <div class="col-lg-6">
-          <img class="img-fluid rounded" src="https://s3-eu-west-1.amazonaws.com/pilatesshopa/donpilates/optimized-bhiw.jpg" alt="">
+          <img class="img-fluid rounded" src="https://d1egmt44b887qe.cloudfront.net/products-me/image6.jpg" alt="">
         </div>
       </div>
       <!-- /.row -->
@@ -173,7 +120,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
         </div>
         <div class="col-md-4">
-          <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+          <a class="btn btn-lg btn-secondary btn-block" href="/products">Products Page</a>
         </div>
       </div>
 
@@ -183,10 +130,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; ppWebsite 2018</p>
-
+        <p class="m-0 text-center text-white">Copyright &copy; Daniel Pilates 2018</p>
       </div>
       <!-- /.container -->
     </footer>
-<% end %>
-</body>

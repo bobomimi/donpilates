@@ -1,59 +1,97 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-<div class="container">
-<%= link_to 'Daniel Pilates', root_path, class: "navbar-brand" %>
-<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarResponsive">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item">
-<%= link_to t('navbar.blog'), posts_path, class: "nav-link" %>
-</li>
-<li class="nav-item">
-<%= link_to t('navbar.products'), products_path, class: "nav-link" %>
-</li>
-<li class="nav-item">
-<%= link_to t('navbar.about'), welcome_about_path, class: "nav-link" %>
-<li>
-<li class="nav-item">
-<%= link_to t('navbar.contact'), new_contact_path, class: "nav-link" %>
-</li>
-<li class="nav-item">
-<% if admin_signed_in? %>
-<%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link" %>
-<% end %>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<div class="container">
-<div class="row" itemscope itemtype="http://schema.org/Product">
-<div class="col-lg-9">
-<div class="card mt-4">
-<%= image_tag @product.image.url, class: "card-img-top img-fluid", itemprop: "image" %>
-<div class="card-body">
-<h3 class="card-title" itemprop="name"><%= @product.main_title %></h3>
-<h4 itemprop="price">$<%= @product.price %></h4>
-<p class="card-text" itemprop="sub-title"><%= @product.sub_title %></p>
-</div>
-<div class="card card-outline-secondary my-4">
-<div class="card-header">
-Product Reviews
-</div>
-<div class="card-body">
-<p itemprop="description"><%= @product.description %></p>
-<small class="text-muted">Posted by Anonymous on 3/1/17</small>
+
+
+
+    <div class="container">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3"><%= @product.main_title %>
+        
+      </h1>
+
+
+
+      <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+          <!-- Preview Image -->
+          <%= image_tag @product.image.url, class: "img-fluid rounded", itemprop: "image" %>
+
+
+
+          <hr>
+
+          <!-- Post Content -->
+          <p class="lead"><%= @product.description %></p>
+
+
+
+
+
 <hr>
-<a href="#" class="btn btn-success">Leave a Review</a>
+<h3 class="my-4">ציוד נלווה לרפורמר כלול במחיר</h3>
+<div class="row">
+<div class="col-md-3 col-sm-6 mb-4">
+<img class="img-fluid" src="https://s3-eu-west-1.amazonaws.com/danielpilates/products-me/reformer-box.jpg" alt="reformer-box">
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#">
+<img class="img-fluid" src="https://s3-eu-west-1.amazonaws.com/danielpilates/products-me/reformer-springs.jpg" alt="">
+</a>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#">
+<img class="img-fluid" src="https://s3-eu-west-1.amazonaws.com/danielpilates/products-me/reformer-double-loops.jpg" alt="">
+</a>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#">
+<img class="img-fluid" src="https://s3-eu-west-1.amazonaws.com/danielpilates/products-me/reformer-jumpboard.jpg" alt="">
+</a>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#">
+<img class="img-fluid" src="https://s3-eu-west-1.amazonaws.com/danielpilates/products-me/reformer-ropes.jpg" alt="">
+</a>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#">
+<img class="img-fluid" src="https://s3-eu-west-1.amazonaws.com/danielpilates/products-me/reformer-head-support-pillow.jpg" alt="">
+</a>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#">
+<img class="img-fluid" src="https://s3-eu-west-1.amazonaws.com/danielpilates/products-me/reformer-foot-straps.jpg" alt="">
+</a>
 </div>
 </div>
+
 </div>
+
+
+      <!-- /.row -->
+
+</div>    <!-- /.container -->
 </div>
-</div>
-</div>
-<footer class="py-5 bg-dark">
-<div class="container">
-<p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-</div>
-</footer>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+        <%= link_to I18n.with_locale(:he){product_path(@product, locale: 'he')} do %>
+          <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
+        <% end %>
+        <%= link_to I18n.with_locale(:es){product_path(@product, locale: 'es')} do %>
+          <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
+        <% end %>
+        <%= link_to I18n.with_locale(:de){product_path(@product, locale: 'de')} do %>
+          <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
+        <% end %>
+        <%= link_to I18n.with_locale(:en){product_path(@product, locale: 'en')} do %>
+          <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
+        <% end %>

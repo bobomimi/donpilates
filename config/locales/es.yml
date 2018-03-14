@@ -1,14 +1,15 @@
 es:
   products:
-    reformers:
-      title: Reformers
+    reformer:
+      title_link: clasico-reformer 
+      title: Clasico Reformer
       sub_title:
       description:
     reformer_tower:
       title: Reformers con torre
       sub_title:
       description:
-    reformer_cadilac:
+    cadilac_reformer:
       title: Reformers con cadilac
       sub_title:
       description:
@@ -20,11 +21,11 @@ es:
       title: Barriles escalera
       sub_title:
       description:
-    sprinsboards:
+    sprinsboard:
       title: Springboard
       sub_title:
       description:
-    wall_unit:
+    wall_tower:
       title: Torres
       sub_title:
       description:

@@ -1,14 +1,15 @@
 he:
   products:
-    reformers:
-      title: מיטות רפורמר
+    reformer:
+      title_link: מיטת-רפורמר
+      title: מיטת רפורמר
       sub_title:
       description:
     reformer_tower:
       title: רפורמר-טאוור משולב
       sub_title:
       description:
-    reformer_cadilac:
+    cadilac_reformer:
       title: קאדילק בשילוב רפורמר
       sub_title:
       description:
@@ -20,11 +21,11 @@ he:
       title: מכשירים מקושתים לדר-בארל
       sub_title:
       description:
-    sprinsboards:
+    sprinsboard:
       title: ספרינג בורד
       sub_title:
       description:
-    wall_unit:
+    wall_tower:
       title: יחידת קיר
       sub_title:
       description:

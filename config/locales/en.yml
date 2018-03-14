@@ -31,16 +31,17 @@
 
 en:
   products:
-    reformers:
-      title: Reformers
+    reformer:
+      title_link: classic-reformer
+      title: Classic Reformer
       sub_title:
       description:
     reformer_tower:
-      title: Reformers with Tower
+      title: Reformer with Tower
       sub_title:
       description:
-    reformer_cadilac:
-      title: Reformers with Cadilac
+    cadilac_reformer:
+      title: Cadilac Reformer
       sub_title:
       description:
     cadilac:
@@ -51,11 +52,11 @@ en:
       title: Barrels & Arcs
       sub_title:
       description:
-    sprinsboards:
+    sprinsboard:
       title: Springboard
       sub_title:
       description:
-    wall_unit:
+    wall_tower:
       title: Wall Tower
       sub_title:
       description:
