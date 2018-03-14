@@ -28,6 +28,11 @@
                 <a href=""><%= product.title %></a>
               </h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+              <% if admin_signed_in? %>
+                <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
+                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+                <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
+              <% end %>
             </div>
           </div>
         </div>
