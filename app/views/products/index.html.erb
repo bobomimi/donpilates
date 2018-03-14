@@ -22,10 +22,14 @@
       <% @products.each do |product| %>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href=""><%= image_tag product.image.url,class: "card-img-top", alt: ""%></a>
+          <% link_to product do %>
+            <%= image_tag product.image.url,class: "card-img-top", alt: ""%>
+          <% end %>
             <div class="card-body">
               <h4 class="card-title">
-                <a href=""><%= product.title %></a>
+              <%= link_to product do %>
+                <%= product.title %>
+              <% end %>
               </h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
               <% if admin_signed_in? %>
