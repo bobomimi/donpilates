@@ -122,6 +122,6 @@ Rails.application.configure do
 
  #config.action_controller.session[:domain] = 'imagecdn.donpilates.com'
 
- #config.serve_static_assets = true
+ config.serve_static_assets = true
 
 end
