@@ -6,34 +6,42 @@ es:
       sub_title:
       description:
     reformer_tower:
-      title: Reformers con torre
+      title_link: reformer-con-torre
+      title: Reformer con torre
       sub_title:
       description:
     cadilac_reformer:
-      title: Reformers con cadilac
+      title_link: reformer-con-cadilac
+      title: Reformer con cadilac
       sub_title:
       description:
     cadilac:
+      title_link: cadilac
       title: Cadilac
       sub_title:
       description:
     barrels_arcs:
+      title_link: barriles-escalera
       title: Barriles escalera
       sub_title:
       description:
     sprinsboard:
+      title_link: springboard
       title: Springboard
       sub_title:
       description:
     wall_tower:
+      title_link: torres
       title: Torres
       sub_title:
       description:
     chairs:
+      title_link: sillas
       title: Sillas
       sub_title:
       description:
     equipment_accessories:
+      title_link: otros-accesorios
       title: Otros accesorios
       sub_title:
       description:

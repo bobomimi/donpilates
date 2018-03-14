@@ -37,34 +37,42 @@ en:
       sub_title:
       description:
     reformer_tower:
+      title_link: reformer-with-tower
       title: Reformer with Tower
       sub_title:
       description:
     cadilac_reformer:
-      title: Cadilac Reformer
+      title_link: cadilac-reformer
+      title: Cadilac Reformer 
       sub_title:
       description:
     cadilac:
+      title_link: cadilac
       title: Cadilac
       sub_title:
       description:
     barrels_arcs:
+      title_link: barrels-and-arcs
       title: Barrels & Arcs
       sub_title:
       description:
     sprinsboard:
+      title_link: springboard
       title: Springboard
       sub_title:
       description:
     wall_tower:
+      title_link: wall-tower
       title: Wall Tower
       sub_title:
       description:
     chairs:
+      title_link: chairs
       title: Chairs
       sub_title:
       description:
     equipment_accessories:
+      title_link: equipment-and-accessories
       title: Equipment & Accessories
       sub_title:
       description:
