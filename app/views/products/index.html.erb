@@ -1,4 +1,4 @@
- <!-- <%= link_to url_for(locale: :en) do %>
+     <%= link_to url_for(locale: :en) do %>
         <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
       <% end %>
       <%= link_to url_for(locale: :es) do %>
@@ -8,7 +8,7 @@
         <%= image_tag('https://dbcdnk728du6i.cloudfront.net/teams/logos/128x128/2713-israel.png', width: '23', height: '15.33', alt: 'English') %>
       <% end %>
       <%= link_to url_for(locale: :de) do %>
-        <%= image_tag('https://cdn3.iconfinder.com/data/icons/world-flags-square-vol-2/48/Germany-128.png', width: '23', height: '15.33', alt: 'Spanish') %>-->
+        <%= image_tag('https://cdn3.iconfinder.com/data/icons/world-flags-square-vol-2/48/Germany-128.png', width: '23', height: '15.33', alt: 'Spanish') %>
       <% end %>
 <!-- Page Content -->
     <div class="container">
@@ -17,109 +17,50 @@
       <h1 class="mt-4 mb-3">
         <small></small>
       </h1>
-
+      
       <div class="row">
+      <% @products.each do |product| %>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="/products/classic-reformer"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image2.jpg" alt=""></a>
+            <a href=""><%= image_tag product.image.url,class: "card-img-top", alt: ""%></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/products/<%= t 'products.reformer.title_link' %>"><%= t 'products.reformer.title' %></a>
+                <a href=""><%= product.title %></a>
               </h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image3.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/products/<%= t 'products.reformer_tower.title_link' %>"><%= t 'products.reformer_tower.title' %></a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image4.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-
-                <a href="/products/<%= t 'products.cadilac_reformer.title_link' %>"><%= t 'products.cadilac_reformer.title' %></a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image1.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/products/<%= t 'products.cadilac.title_link' %>"><%= t 'products.cadilac.title' %></a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image5.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/products/<%= t 'products.barrels_arcs.title_link' %>"><%= t 'products.barrels_arcs.title' %></a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image6.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/products/<%= t 'products.sprinsboard.title_link' %>"><%= t 'products.sprinsboard.title' %></a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image7.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/products/<%= t 'products.wall_tower.title_link' %>"><%= t 'products.wall_tower.title' %></a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image7.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/products/<%= t 'products.chairs.title_link' %>"><%= t 'products.chairs.title' %></a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://d1egmt44b887qe.cloudfront.net/products-me/image7.jpg" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/products/<%= t 'products.equipment_accessories.title_link' %>"><%= t 'products.equipment_accessories.title' %></a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
