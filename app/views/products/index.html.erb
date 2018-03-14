@@ -22,7 +22,7 @@
       <% @products.each do |product| %>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-          <% link_to product do %>
+          <%= link_to product do %>
             <%= image_tag product.image.url,class: "card-img-top", alt: ""%>
           <% end %>
             <div class="card-body">
