@@ -1,39 +1,31 @@
-    
-
-<!-- Page Content -->
-    <div class="container">
-
-    
-
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">
-        <small></small>
-      </h1>
-      
-      <div class="row">
-      <% @products.each do |product| %>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-          <%= link_to product do %>
-            <%= image_tag product.image,class: "card-img-top", alt: ""%>
-          <% end %>
-            <div class="card-body">
-              <h4 class="card-title">
-              <%= link_to product do %>
-                <%= product.main_title %>
-              <% end %>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-              <% if admin_signed_in? %>
-                <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
-                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
-                <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
+<div class="container">
+<h1 class="mt-4 mb-3">
+<small></small>
+</h1>
+<div class="row">
+<% @products.each do |product| %>
+<div class="col-lg-4 col-sm-6 portfolio-item">
+<div class="card h-100">
+<%= link_to product do %>
+<%= image_tag product.image(:index),class: "card-img-top", alt: ""%>
+<% end %>
+<div class="card-body">
+<h4 class="card-title">
+<%= link_to product do %>
+<%= product.main_title %>
+<% end %>
+</h4>
+<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+<% if admin_signed_in? %>
+<%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
+<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+<%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
+<% end %>
+</div>
+</div>
+</div>
+<% end %>
+</div>
       
 
 
