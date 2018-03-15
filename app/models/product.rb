@@ -22,7 +22,7 @@ class Product < ApplicationRecord
       :url => ':s3_alias_url',
       :s3_host_alias => 'd36y0kv3zyrf84.cloudfront.net', 
       :bucket => 'danielpilates',
-      s3_headers: { 'Expires' => 1.hour.from_now.httpdate }
+      use_timestamp: false
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 end
