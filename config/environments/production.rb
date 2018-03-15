@@ -109,7 +109,7 @@ Rails.application.configure do
     }
   }
 
-  #config.action_controller.asset_host = 'dnolght8j312u.cloudfront.net'
+  config.action_controller.asset_host = 'd3t19itc2fbau0.cloudfront.net'
 
   config.action_controller.perform_caching = true
   
