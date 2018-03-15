@@ -1,4 +1,10 @@
 es:
+  navbar:
+    title: Daniel Pilates
+    blog: Blog
+    products: Productos
+    about: Acerca
+    contact: Contacto
   products:
     reformer:
       title_link: clasico-reformer 

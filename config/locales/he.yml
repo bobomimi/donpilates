@@ -1,4 +1,10 @@
 he:
+  navbar:
+    title: דניאל פילאטיס
+    blog: בלוג
+    products: ציוד פילאטיס 
+    about: אודות
+    contact: צור/י קשר
   products:
     reformer:
       title_link: מיטת-רפורמר

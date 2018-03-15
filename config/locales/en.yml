@@ -30,6 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  navbar:
+    title: Daniel Pilates
+    blog: Blog
+    products: Products
+    about: About
+    contact: Contact
   products:
     reformer:
       title_link: classic-reformer

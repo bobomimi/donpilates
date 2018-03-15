@@ -1,4 +1,10 @@
 de:
+  navbar:
+    title: Daniel Pilates
+    blog: Blog
+    products: Products
+    about: About
+    contact: Contact
   activerecord:
     errors:
       messages:

@@ -8,7 +8,7 @@
         
       </h1>
 
- <%= link_to I18n.with_locale(:en){product_path(@product, locale: 'en')} do %>
+       <%= link_to I18n.with_locale(:en){product_path(@product, locale: 'en')} do %>
           <%= image_tag('https://pilatesshopa.s3-eu-west-1.amazonaws.com/posts/images/000/000/001/original/usa.png?1520004588', width: '23', height: '15.33', alt: 'English') %>
         <% end %>
         <%= link_to I18n.with_locale(:es){product_path(@product, locale: 'es')} do %>
@@ -26,7 +26,7 @@
         <div class="col-lg-8">
 
           <!-- Preview Image -->
-          <%= image_tag @product.image.url, class: "img-fluid rounded", itemprop: "image" %>
+          <%= image_tag @product.image, class: "img-fluid rounded", itemprop: "image" %>
 
 
 
