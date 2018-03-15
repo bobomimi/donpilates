@@ -77,3 +77,5 @@ gem 'sitemap_generator'
 gem "fog-aws"
 
 gem 'rack-cors', :require => 'rack/cors'
+
+gem 'http_accept_language'

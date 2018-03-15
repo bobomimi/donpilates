@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
   before_action :set_locale
+  protect_from_forgery with: :exception
   
 
   def set_locale
     I18n.locale = params[:locale] if params[:locale].present?
-
+    I18n.locale = http_accept_language.compatible_language_from(I18n.available_locales)
     # current_user.locale
     # request.subdomain
     # request.env["HTTP_ACCEPT_LANGUAGE"]
