@@ -109,7 +109,7 @@ Rails.application.configure do
     }
   }
 
-  config.action_controller.asset_host = 'dnolght8j312u.cloudfront.net'
+  config.action_controller.asset_host = 'd3h7s96dsdm6gm.cloudfront.net/assets'
 
   config.action_controller.perform_caching = true
   
@@ -120,7 +120,6 @@ Rails.application.configure do
     "Expires" => "#{1.year.from_now.to_formatted_s(:rfc822)}"
  }
 
- #config.action_controller.session[:domain] = 'imagecdn.donpilates.com'
 
  config.serve_static_assets = true
 
