@@ -20,7 +20,7 @@ class Product < ApplicationRecord
         :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
         :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] },
       :url => ':s3_alias_url',
-      :s3_host_alias => 'd1egmt44b887qe.cloudfront.net', 
+      :s3_host_alias => 'd3h7s96dsdm6gm.cloudfront.net', 
       :bucket => 'danielpilates',
       s3_headers: { 'Expires' => 1.hour.from_now.httpdate }
 
