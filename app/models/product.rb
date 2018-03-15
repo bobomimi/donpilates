@@ -14,6 +14,10 @@ class Product < ApplicationRecord
 
   
   has_attached_file :image,
+      styles: {
+    index: '348x199>',
+    show: '700x400>'
+  }
       :default_url => "/images/:style/missing.png",
       :storage => :s3,
       :s3_credentials => {
