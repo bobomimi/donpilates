@@ -8,18 +8,10 @@
 <html lang="en">
 
   <head>
-   <style type="text/css">header {
-  padding: 154px 0 100px;
-}
-
-@media (min-width: 992px) {
-  header {
-    padding: 156px 0 100px;
-  }
-}
+   <style type="text/css">body{padding-top:0px}
 
 section {
-  padding: 150px 0;background: url('https://d36y0kv3zyrf84.cloudfront.net/products-me/aboutmain.jpg') no-repeat center center fixed;
+  padding: 150px 0;background: url('https://d36y0kv3zyrf84.cloudfront.net/products-me/rsz_mainabout.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -30,16 +22,67 @@ section {
 </style>
 </head>
 <body>
-    
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class=container>
+<%= link_to t('navbar.title'), root_path, class: "navbar-brand" %>
+<button class="navbar-toggler navbar-toggler-right" type=button data-toggle=collapse data-target=#navbarResponsive aria-controls=navbarResponsive aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbarResponsive>
+<ul class="navbar-nav ml-auto">
+<li class=nav-item>
+</li>
+<li class=nav-item>
+<%= link_to t('navbar.blog'), posts_path, class: "nav-link" %>
+</li>
+<li class=nav-item>
+<%= link_to t('navbar.products'), products_path, class: "nav-link" %>
+</li>
+<li class=nav-item>
+<%= link_to t('navbar.about'), welcome_about_path, class: "nav-link" %>
+<li>
+<li class=nav-item>
+<%= link_to t('navbar.contact'), new_contact_path, class: "nav-link" %>
+</li>
+<li class=nav-item>
+</li>
+<li class=nav-item>
+</li>
+<li class=nav-item>
+<% if admin_signed_in? %>
+<%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "nav-link" %>
+<% end %>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+    <section>
 
 
 
-    <section id="about"  class="bg-light">
+
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Services we offer</h2>
-            <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+            <h2 class="text-center">אודות דניאל מכשירי פילאטיס</h2>
+            <p class="lead text-center">הבחירה לייצר דווקא מיטות ואבזרי פילאטיס באה מתוך הכרות קרובה עם שיטת פילאטיס, אמונה
+ביתרונותיה ויכולותיה הרבים ואהבה למוצר. החברה שמה לנגד עיניה שני עקרונות חשובים המנחים
+אותה לאורך כל הדרך</p>
+<p class="lead text-center">דגש רב ניתן לאיכות המוצר אנו מאמינים כי החלק המשמעותי ביותר המביא לתוצאות
+  טובות ומשמעותיות, נמצא באיכות המכשיר. לכן אנו מקפידים על כך שהמוצר יהיה בעל
+  נוחות רבה, עשוי מחומרים חזקים ועמידים ובעל גימור חלק ומבריק, ריפוד איכותי וחזק
+  במקום בו נדרש ריפוד וסליידר המאפשר תנועה מהירה מחד אך יציבה ביותר מאידך. כל
+  החלקים המכניים חזקים, עמידים ואסטתיים. מאחר וקפיצים באיכות גרועה עלולים לגרום
+  לפגיעות גוף אנו מקפידים על ייצור קפיצים מדוייקים בחוזקם, בעלי מרחב התאמה וכיוונון
+  מעולים, בטוחים ועמידים לאורך זמן רב המבטיחים פעילות תקינה וחלקה.</p>
+  <p class="lead text-center">ניתן גם למצוא אצלנו אביזרים נוספים מלבד המיטות, כמו - מזרונים נעימים למגע ועשויים
+מחומר איכותי, מגוון כדורים, גלילים מחומר עמיד ומשובח, טבעות פילאטיס נעימות למגע,
+מרופדות ונוחות מאד לשימוש, אביזרים ליציבה ושיווי משקל, לולאות וידיות בעלות עיצוב
+חדיש וארגונומי המאפשרות יכולת עבודה מכל זוית ועוד</p>
             <ul>
               <li>Clickable nav links that smooth scroll to page sections</li>
               <li>Responsive behavior when clicking nav links perfect for a one page website</li>
@@ -49,19 +92,14 @@ section {
           </div>
         </div>
       </div>
-    </section>
 
 
+<div class="container">
 
-    <section id="contact"  class="bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Contact us</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-            <%= form_for Contact.new do |f| %>
+      <%= form_for Contact.new do |f| %>
       <div class="row">
-        <div class="col-lg-8 mb-4">
+        <div class="col-lg-8 mx-auto">
+         <h3>Send us a Message</h3>
           <form name="sentMessage" id="contactForm" novalidate>
             <div class="control-group form-group">
               <div class="controls">
@@ -93,14 +131,10 @@ section {
             <!-- For success/fail messages -->
             <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
           </form>
-        </div>
+        </div></div>
         <% end %>
-          </div>
-        </div>
       </div>
-      </div>
-    </section>
-
+</section>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
