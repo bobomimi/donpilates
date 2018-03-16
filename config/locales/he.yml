@@ -51,6 +51,10 @@ he:
       title: ציוד ואביזרים
       sub_title:
       description:
+  about:
+    dir: dir="rtl"
+    title: אודות דניאל פילאטיס
+    description:
   activerecord:
     errors:
       messages:

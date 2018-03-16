@@ -82,6 +82,10 @@ en:
       title: Equipment & Accessories
       sub_title:
       description:
+  about:
+    dir: dir="ltr"
+    title: About Daniel Pilates
+    description:
   activerecord:
     errors:
       messages:
