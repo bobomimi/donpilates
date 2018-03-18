@@ -79,3 +79,5 @@ gem "fog-aws"
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'http_accept_language'
+
+gem 'simple-line-icons-rails'
