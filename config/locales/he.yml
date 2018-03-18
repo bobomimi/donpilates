@@ -1,4 +1,18 @@
 he:
+  about:
+    title1: איכות החומרים
+    description1:  אנו מאמינים כי החלק המשמעותי ביותר המביא לתוצאות טובות ומשמעותיות, נמצא באיכות המכשיר. אנו מקפידים על כך שהמוצר יהיה בעל נוחות רבה, עשוי מחומרים חזקים ועמידים ובעל גימור חלק ומבריק, ריפוד איכותי וחזק וסליידר המאפשר תנועה מהירה ויציבה. כל החלקים המכניים חזקים, עמידים ואסטתיים. מאחר וקפיצים באיכות גרועה עלולים לגרוםלפגיעות גוף אנו מקפידים על ייצור קפיצים מדוייקים בחוזקם, בעלי מרחב התאמה וכיוונון מעולים, בטוחים ועמידים לאורך זמן רב.
+    title2: ציוד בעבודת יד
+    description2: כל ציוד שיוצא מהמפעל שלנו אל הלקוח יוצר בעבודת יד בבקרת איכות ברמה הגבוהה ביותר. אנחנו מאמינים שכדי לספק ללקוח את המוצר ברמה הגבוהה ביותר עלינו להשקיע את מלוא הנסיון, תשומת הלב והאהבה בכל מוצר ומוצר.
+    title3: ההצעה המשתלמת ביותר
+    description3: מאחר ואנחנו מיצרים את המיטות בעצמנו, אנחנו יכולים להציע לכם את המוצר הטוב ביותר במחיר האטרקטיבי ביותר. אצלנו אין פערי תיווך ולכן אתם מקבלים ציוד פילאטיס מכשירים במחיר התחרותי ביותר בארץ מבלי להתפשר על האיכות.
+  navbar:
+    hompage: דף הבית
+    title: דניאל פילאטיס
+    blog: בלוג
+    products: ציוד פילאטיס 
+    about: אודות
+    contact: צור/י קשר
   activerecord:
     errors:
       messages:
@@ -195,66 +209,4 @@ he:
       long: "%d ב%B, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
-  navbar:
-    hompage: דף הבית
-    title: דניאל פילאטיס
-    blog: בלוג
-    products: ציוד פילאטיס 
-    about: אודות
-    contact: צור/י קשר
-  products:
-    reformer:
-      title_link: מיטת-רפורמר
-      title: מיטת רפורמר
-      sub_title:
-      description:
-    reformer_tower:
-      title_link: רפורמר-טאוור-משולב
-      title: רפורמר-טאוור משולב
-      sub_title:
-      description:
-    cadilac_reformer:
-      title_link: קאדילק-בשילוב-רפורמר
-      title: קאדילק בשילוב רפורמר
-      sub_title:
-      description:
-    cadilac:
-      title_link: קאדילק
-      title: קאדילק
-      sub_title:
-      description:
-    barrels_arcs:
-      title_link: מכשירים-מקושתים-לדר-בארל
-      title: מכשירים מקושתים לדר-בארל
-      sub_title:
-      description:
-    sprinsboard:
-      title_link: ספרינג-בורד
-      title: ספרינג בורד
-      sub_title:
-      description:
-    wall_tower:
-      title_link: יחידת-קיר
-      title: יחידת קיר
-      sub_title:
-      description:
-    chairs:
-      title_link: כסאות-פילאטיס
-      title: כסאות פילאטיס
-      sub_title:
-      description:
-    equipment_accessories:
-      title_link: ציוד-ואביזרים
-      title: ציוד ואביזרים
-      sub_title:
-      description:
-  about:
-    dir: dir="rtl"
-    title: אודות דניאל פילאטיס
-    description:
-  time:
-    formats:
-      default: "%Y/%m/%d"
-      short: "%b %d"
-      long: "%B %d, %Y"
-  
+
