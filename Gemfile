@@ -81,3 +81,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'http_accept_language'
 
 gem 'simple-line-icons-rails'
+
+gem 'stripe'
+
+gem 'trivia', '~> 0.1.4'
